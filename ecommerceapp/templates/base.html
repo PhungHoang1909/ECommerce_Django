@@ -50,15 +50,8 @@
 
         {% comment %} 3. Header Title {% endcomment %}
         <main>
-            <header class="px-6 py-10 lg:py-20 bg-purple-500">
-                <div class="max-w-3xl mx-auto text-center">
-                    <p class="mb-2 text-3xl lg:text-5xl text-white">Welcome to our website</p>
-
-                    <p class="mb-10 text-white">We sell ... for ...</p>
-
-                    <a href="#" class="inline-block px-8 py-4 rounded-xl bg-white text-purple-500 hover:bg-gray-200">Start shopping</a>
-                </div>
-            </header>
+            {% block content %}
+            {% endblock %}
         </main>
 
         {% comment %} 1. Create footer {% endcomment %}
