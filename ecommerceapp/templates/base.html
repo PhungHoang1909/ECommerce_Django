@@ -11,13 +11,34 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <h1>Test</h1>
+        {% comment %} Create footer {% endcomment %}
+        <footer class="bg-gray-100">
+            <div class="max-w-6xl mx-auto py-10 px-6 xl:px-0 md:flex justify-between">
+                <div class="footer-left mb-12 md:mb-0">
+                    <h2 class="mb-5 uppercase text-lg">About us</h2>
+
+                    <p class="text-gray-700">Testing</p>
+                </div>
+
+                {% comment %} contact links {% endcomment %}
+                <div class="footer-right">
+                    <h2 class="mb-5 uppercase text-lg">Contact us</h2>
+
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-purple-500" hover:text-purple-800">Facebook</a></li>
+                        <li><a href="#" class="text-purple-500" hover:text-purple-800">Github</a></li>
+                        <li><a href="#" class="text-purple-500" hover:text-purple-800">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
         
         <script src="" async defer></script>
     </body>
