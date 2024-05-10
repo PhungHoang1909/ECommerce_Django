@@ -20,9 +20,11 @@
         <h3 class="mt-6 mb-3 text-xl uppercase">Categories</h3>
 
         <ul class="space-y-2">
-            <li><a href="#" class="text-purple-500">All categories</a></li>
-            <li><a href="#" class="text-gray-500">Mouses</a></li>
-            <li><a href="#" class="text-gray-500">Keyboards</a></li>
+            <li><a href="{% url 'shop' %}" class="{% if not active_category %}text-purple-500{% else %}text-gray-500{% endif %}">All categories</a></li>
+
+            {% for category in categories %}
+                <li><a href="{% url 'shop' %}?category={{ category.slug }}" class="{% if category.slug == active_category %}text-purple-500{% else %}text-gray-500{% endif %}">{{ category.name }}</a></li>
+            {% endfor %}
         </ul>
 
     </div>
